@@ -1,10 +1,16 @@
 class Api::UsersController < ApplicationController
   before_action :set_api_user, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   # GET /api/users
   # GET /api/users.json
   def index
     @api_users = Api::User.all
+    #render json: @api_users
+    respond_to do | format |
+        format.html
+        format.json { render json: @api_users }
+    end
   end
 
   # GET /api/users/1
@@ -25,6 +31,7 @@ class Api::UsersController < ApplicationController
   # POST /api/users.json
   def create
     @api_user = Api::User.new(api_user_params)
+    print @api_user.inspect 
 
     respond_to do |format|
       if @api_user.save
@@ -69,6 +76,6 @@ class Api::UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def api_user_params
-      params.require(:api_user).permit(:first_name, :last_name, :email, :password, :gender)
+      params.permit(:first_name, :last_name, :email, :password, :gender)
     end
 end
