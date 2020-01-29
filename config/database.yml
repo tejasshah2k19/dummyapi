@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: myapi_dev
+  pool: 5
+  username: tejas
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: myapi_prod
+  pool: 5
+  username: tejas
+  password:
