@@ -1,24 +1,32 @@
-# README
+BASIC REST API 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+List users 
+GET http://restapi2020.herokuapp.com/api/users 
+GET http://restapi2020.herokuapp.com/api/users.json 
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+Add User 
+POST http://restapi2020.herokuapp.com/api/users.json
+Parameters : first_name:string , last_name:string , email:string , password:string ,gender:string
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+Get Single User [user_id 2 will be fetch]
+GET http://restapi2020.herokuapp.com/api/users/2.json 
+Replace 2.json with any userid that you want to fetch 
 
-* Deployment instructions
 
-* ...
+Update User [user_id 2 will update]
+PUT http://restapi2020.herokuapp.com/api/users/2.json 
+Parameters : first_namee:string , last_name:string , email:string , password:string ,gender:string
+
+
+Delte User [user_id 2 will removde ] 
+DELETE http://restapi2020.herokuapp.com/api/users/2.json 
+
+
+
+
