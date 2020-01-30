@@ -2,6 +2,16 @@ class Api::UsersController < ApplicationController
   before_action :set_api_user, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token
 
+
+  # swagger_controller :users, "User Management" do
+  
+  #   swagger_api :create do
+  #     summary "Creates a new User"
+  #     param :form, :first_name, :string, "First Name"
+
+  #   end 
+
+  # end 
   # GET /api/users
   # GET /api/users.json
   def index

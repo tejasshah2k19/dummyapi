@@ -22,8 +22,7 @@
         <td><%= api_user.email %></td>
         <td><%= api_user.password %></td>
         <td><%= api_user.gender %></td>
-        <td><%= link_to 'Show', api_user %></td>
-        <td><%= link_to 'Edit', edit_api_user_path(api_user) %></td>
+  
         <td><%= link_to 'Destroy', api_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -32,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Api User', new_api_user_path %>
+<%#= link_to 'New Api User', new_api_user_path %>

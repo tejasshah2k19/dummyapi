@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  namespace :api do
-    resources :users
-  end
+  # resources :cities
+    namespace :api do
+      resources :users
+   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+#mount Rswag::Ui::Engine, at: 'api-docs'
+#mount GrapeSwaggerRails::Engine => '/swagger'
+root :to => "api/users#index"
+
+# resources :users
 end
