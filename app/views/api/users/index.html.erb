@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>UserId</th>
       <th>First name</th>
       <th>Last name</th>
       <th>Email</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @api_users.each do |api_user| %>
       <tr>
+        <td><%= api_user.id%></td>
         <td><%= api_user.first_name %></td>
         <td><%= api_user.last_name %></td>
         <td><%= api_user.email %></td>
