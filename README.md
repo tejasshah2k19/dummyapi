@@ -3,7 +3,6 @@ BASIC REST API
 
 
 List users 
-GET http://restapi2020.herokuapp.com/api/users 
 GET http://restapi2020.herokuapp.com/api/users.json 
 
 
@@ -24,9 +23,10 @@ PUT http://restapi2020.herokuapp.com/api/users/2.json
 Parameters : first_namee:string , last_name:string , email:string , password:string ,gender:string
 
 
-Delte User [user_id 2 will removde ] 
+Delte User [user_id 2 will remove ] 
 DELETE http://restapi2020.herokuapp.com/api/users/2.json 
 
 
 
-
+For Browser : 
+http://restapi2020.herokuapp.com
