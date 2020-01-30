@@ -54,6 +54,23 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  #POST /api/login.json 
+  def login 
+    @users  = Api::User.where(email:params[:email],password:params[:password])
+    print "result",@users.inspect
+   respond_to do |format| 
+    if !@users.any? 
+      format.json { render json: "Invalid credentials", status: :unprocessable_entity}
+    else
+      @api_user = @users.first
+      print "data ===> ",@user.inspect
+      format.json {render :show ,status: :ok , location: @api_user}
+    end 
+  end 
+  end 
+
+
+
   # PATCH/PUT /api/users/1
   # PATCH/PUT /api/users/1.json
   def update

@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 #mount Rswag::Ui::Engine, at: 'api-docs'
 #mount GrapeSwaggerRails::Engine => '/swagger'
 root :to => "api/users#index"
-
+post "api/login" => "api/users#login"
 # resources :users
 end
